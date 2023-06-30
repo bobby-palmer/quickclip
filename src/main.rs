@@ -34,8 +34,8 @@ fn remove(alias: String) {
 fn goto(alias: String) {
     let filepath = defaults::get_config().unwrap();
     let index = Index::from_file(&filepath);
-    let fullpath = index.get(alias);
-    util::change_directory(fullpath.unwrap());
+    let fullpath = index.get(alias).unwrap();
+    println!("{fullpath}");
 }
 
 fn main() {
@@ -44,7 +44,7 @@ fn main() {
         Some(Commands::List) => list(),
         Some(Commands::Mark { name }) => mark(name.clone()),
         Some(Commands::Remove { name }) => remove(name.clone()),
-        Some(Commands::goto { alias }) => goto(alias.clone()),
+        Some(Commands::Goto { alias }) => goto(alias.clone()),
         None => mark(None),
     }
 }

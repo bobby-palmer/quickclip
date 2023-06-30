@@ -4,7 +4,7 @@ pub enum Commands {
     List,
     Mark { name: Option<String> },
     Remove { name: String },
-    goto { alias: String },
+    Goto { alias: String },
 }
 
 #[derive(Parser)]
