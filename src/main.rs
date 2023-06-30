@@ -1,9 +1,8 @@
 use clap::Parser;
-use mark::defaults;
-use mark::index::Index;
-use mark::input::{Cli, Commands};
-use mark::util;
-use std::{path::PathBuf, str::FromStr};
+use quickclip::defaults;
+use quickclip::index::Index;
+use quickclip::input::{Cli, Commands};
+use quickclip::util;
 
 fn list() {
     let filepath = defaults::get_config().unwrap();

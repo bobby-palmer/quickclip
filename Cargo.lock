@@ -233,17 +233,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "09fc20d2ca12cb9f044c93e3bd6d32d523e6e2ec3db4f7b2939cd99026ecd3f0"
 
 [[package]]
-name = "mark"
-version = "0.1.0"
-dependencies = [
- "clap",
- "dirs",
- "serde",
- "serde_derive",
- "toml",
-]
-
-[[package]]
 name = "memchr"
 version = "2.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -268,6 +257,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dec2b086b7a862cf4de201096214fa870344cf922b2b30c167badb3af3195406"
 dependencies = [
  "unicode-ident",
+]
+
+[[package]]
+name = "quickclip"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "dirs",
+ "serde",
+ "serde_derive",
+ "toml",
 ]
 
 [[package]]
