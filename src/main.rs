@@ -1,19 +1,7 @@
-use clap::{Parser, Subcommand};
+use clap::Parser;
 use mark::index::Index;
+use mark::input::{Cli, Commands};
 use std::{path::PathBuf, str::FromStr};
-
-#[derive(Subcommand)]
-enum Commands {
-    List,
-    Mark { name: Option<String> },
-}
-
-#[derive(Parser)]
-#[clap(about, version, author)]
-struct Cli {
-    #[clap(subcommand)]
-    command: Option<Commands>,
-}
 
 fn list() {}
 
