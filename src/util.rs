@@ -4,5 +4,5 @@ pub fn get_folder_name() -> String {
     String::from(fullpath.file_name().unwrap().to_str().unwrap())
 }
 pub fn change_directory(new_dir: &String) {
-    Command::new("cd ".to_owned() + new_dir);
+    Command::new("cd ".to_owned() + new_dir).output().unwrap();
 }
