@@ -26,4 +26,7 @@ impl Index {
         let index = toml::to_string_pretty(self).unwrap();
         fs::write(file, index).unwrap();
     }
+    pub fn get(&self, alias: String) -> Option<&String> {
+        self.0.get(&alias)
+    }
 }
