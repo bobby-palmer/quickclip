@@ -16,5 +16,5 @@ pub fn get_config() -> Result<PathBuf, &'static str> {
             return Ok(path);
         }
     }
-    return Err("Cannot find config directory");
+    return Err("Cannot find config file!");
 }

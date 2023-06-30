@@ -3,6 +3,7 @@ use clap::{Parser, Subcommand};
 pub enum Commands {
     List,
     Mark { name: Option<String> },
+    Remove { name: String },
 }
 
 #[derive(Parser)]
