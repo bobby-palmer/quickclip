@@ -7,7 +7,7 @@ use std::path::PathBuf;
 #[derive(Deserialize, Serialize)]
 pub struct Index(BTreeMap<String, PathBuf>);
 impl Index {
-    pub fn from_file(file: PathBuf) -> Self {
+    pub fn from_file(file: &PathBuf) -> Self {
         let content = fs::read_to_string(file).unwrap();
         toml::from_str(&content).unwrap()
     }
@@ -23,7 +23,7 @@ impl Index {
             println!("{} in place of : {}", key, val.to_str().unwrap());
         })
     }
-    pub fn to_file(&self, file: PathBuf) {
+    pub fn to_file(&self, file: &PathBuf) {
         let index = toml::to_string_pretty(self).unwrap();
         fs::write(file, index).unwrap();
     }
