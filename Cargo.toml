@@ -1,5 +1,5 @@
 [package]
-name = "mark"
+name = "quickclip"
 version = "0.1.0"
 edition = "2021"
 description = "A CLI that allows you to book mark important directories."
