@@ -1,6 +1,9 @@
-# RustMark
+# quickclip
 A directory book marker written in rust 🦀!  
 ## Installation
-TODO
+with cargo run : `cargo install quickclip`
 ## Usage
-TODO
+- add new mark with `quickclip`  
+- list all marks with `quickclip list`  
+- remove a clip with ` quickclip remove {NAME}`
+- go to a clip with `quickclip goto {NAME}`
