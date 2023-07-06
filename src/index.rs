@@ -28,4 +28,7 @@ impl Index {
     pub fn get(&self, alias: String) -> Option<&String> {
         self.0.get(&alias)
     }
+    pub fn out(self) -> BTreeMap<String, String> {
+        self.0
+    }
 }

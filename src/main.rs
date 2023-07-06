@@ -3,6 +3,7 @@ use quickclip::defaults;
 use quickclip::index::Index;
 use quickclip::input::{Cli, Commands};
 use quickclip::util;
+use quickclip::gui::launch_gui;
 
 fn list() {
     let filepath = defaults::get_config().unwrap();
@@ -31,11 +32,15 @@ fn remove(alias: String) {
     index.to_file(&filepath);
 }
 
-fn goto(alias: String) {
+fn goto(alias: Option<String>) {
     let filepath = defaults::get_config().unwrap();
     let index = Index::from_file(&filepath);
-    let fullpath = index.get(alias).unwrap();
-    println!("{fullpath}");
+    if let Some(name) = alias {
+        let fullpath = index.get(name).expect("must be a valid mark name!");
+        println!("{fullpath}")
+    } else {
+        launch_gui(index.out());
+    }
 }
 
 fn main() {
