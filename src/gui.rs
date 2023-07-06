@@ -19,8 +19,9 @@ pub fn launch_gui(marks: BTreeMap<String, String>) {
     select.add_all_str(marks.clone().into_keys());
 
     // Sets the callback for when "Enter" is pressed.
-    select.set_on_submit(move |_, alias: &str| {
+    select.set_on_submit(move |s, alias: &str| {
         let path = marks.get(alias).unwrap();
+        s.quit();
         println!("{path}");
     } );
 
