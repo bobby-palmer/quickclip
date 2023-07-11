@@ -5,6 +5,7 @@ use cursive::event::EventResult;
 use cursive::traits::*;
 use cursive::views::{Dialog, OnEventView, SelectView, TextView};
 use cursive::{Cursive, CursiveExt};
+use cursive::theme::load_toml;
 
 pub fn launch_gui(marks: BTreeMap<String, String>) {
     // creating element
@@ -37,7 +38,7 @@ pub fn launch_gui(marks: BTreeMap<String, String>) {
         });
 
     let mut siv = Cursive::default();
-    // siv.set_theme(load_toml(include_str!("./resources/theme.toml")).unwrap());
+    siv.set_theme(load_toml(include_str!("./resources/theme.toml")).unwrap());
 
     // adding interactive options
     siv.add_layer(
