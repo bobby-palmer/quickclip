@@ -4,6 +4,7 @@ use quickclip::index::Index;
 use quickclip::input::{Cli, Commands};
 use quickclip::util;
 use quickclip::gui::launch_gui;
+use quickclip::init;
 
 fn list() {
     let filepath = defaults::get_config().unwrap();
@@ -49,9 +50,18 @@ fn goto(alias: Option<String>) {
     }
 }
 
+fn init() {
+    if init::init() {
+        println!("successfully created config file!");
+    } else {
+        println!("There was an error initializing a config file");
+    }
+}
+
 fn main() {
     let args = Cli::parse();
     match &args.command {
+        Some(Commands::Init) => init(),
         Some(Commands::List) => list(),
         Some(Commands::Mark { name }) => mark(name.clone()),
         Some(Commands::Remove { name }) => remove(name.clone()),
