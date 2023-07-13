@@ -2,7 +2,7 @@
 name = "quickclip"
 version = "0.1.3"
 edition = "2021"
-description = "A CLI that allows you to book mark important directories."
+description = "A CLA that allows you to book mark important directories."
 license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
