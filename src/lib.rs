@@ -3,3 +3,4 @@ pub mod index;
 pub mod input;
 pub mod util;
 pub mod gui;
+pub mod init;
