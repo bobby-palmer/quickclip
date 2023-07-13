@@ -14,14 +14,20 @@ fn list() {
 fn mark(alias: Option<String>) {
     let filepath = defaults::get_config().unwrap();
     let mut index = Index::from_file(&filepath);
-    index.add(
-        alias.unwrap_or_else(|| util::get_folder_name()),
+    let clip_name = alias.unwrap_or_else(|| util::get_folder_name());
+    if index.add(
+        clip_name.clone(),
         std::env::current_dir()
             .unwrap()
             .to_str()
             .unwrap()
             .to_owned(),
-    );
+    ) {
+        println!("Directory successfully bookmarked");
+    } else {
+        println!("A bookmark with name {clip_name} already exists!");
+        println!("Try giving this one a different name with `quickclip NAME`");
+    }
     index.to_file(&filepath);
 }
 

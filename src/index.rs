@@ -10,8 +10,12 @@ impl Index {
         let content = fs::read_to_string(file).unwrap();
         toml::from_str(&content).unwrap()
     }
-    pub fn add(&mut self, alias: String, path: String) {
+    pub fn add(&mut self, alias: String, path: String) -> bool {
+        if self.0.contains_key(&alias) {
+            return false
+        }
         self.0.insert(alias, path);
+        true
     }
     pub fn remove(&mut self, alias: String) {
         self.0.remove(&alias);
