@@ -4,6 +4,7 @@ version = "0.1.3"
 edition = "2021"
 description = "A CLA that allows you to book mark important directories."
 license = "MIT"
+repository = "https://github.com/bobby-palmer/quickclip"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
