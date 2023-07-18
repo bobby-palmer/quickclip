@@ -51,11 +51,7 @@ fn goto(alias: Option<String>) {
 }
 
 fn init() {
-    if init::init() {
-        println!("successfully created config file!");
-    } else {
-        println!("There was an error initializing a config file");
-    }
+    init::init();
 }
 
 fn main() {
