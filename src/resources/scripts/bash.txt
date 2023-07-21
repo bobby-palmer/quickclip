@@ -1,0 +1,4 @@
+function goto () {
+  path = $(quickclip goto $@)
+  cd -- path
+}
