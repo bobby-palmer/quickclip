@@ -50,14 +50,10 @@ fn goto(alias: Option<String>) {
     }
 }
 
-fn init() {
-    init::init();
-}
-
 fn main() {
     let args = Cli::parse();
     match &args.command {
-        Some(Commands::Init) => init(),
+        Some(Commands::Init{ name }) => init::init(name),
         Some(Commands::List) => list(),
         Some(Commands::Mark { name }) => mark(name.clone()),
         Some(Commands::Remove { name }) => remove(name.clone()),

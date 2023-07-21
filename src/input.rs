@@ -1,7 +1,7 @@
 use clap::{Parser, Subcommand};
 #[derive(Subcommand)]
 pub enum Commands {
-    Init,
+    Init{ name: String },
     List,
     Mark { name: Option<String> },
     Remove { name: String },
