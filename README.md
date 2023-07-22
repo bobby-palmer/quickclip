@@ -3,24 +3,25 @@ A directory book marker written in rust 🦀!
 ## Installation
 with cargo run : `cargo install quickclip`  
 then add your respective shells startup script:
-<details open>
+<details closed>
   <summary>fish</summary>
   <br>
   add `quickclip init fish | source` to your config file.  
   this is usually in fish.config  
 </details>
-<details open>
+<details closed>
   <summary>zsh</summary>
   <br>
   add `eval "$(quickclip init zsh)"` to your config file.  
   this is usually in .zshrc  
 </details>
-<details open>
+<details closed>
   <summary>bash</summary>
   <br>
   add `eval "$(quickclip init bash)"` to your config file.  
   this is usually in .bashrc  
-</details>
+</details>  
+
 ## Usage
 - add new mark with `quickclip {NAME}`
   - if NAME is not specified, it will default to the folder name.  
