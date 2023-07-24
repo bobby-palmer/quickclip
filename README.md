@@ -1,7 +1,7 @@
-# quickclip
+# Quickclip
 A directory book marker written in rust 🦀!  
-## demo  
-![alt-text](https://github.com/bobby-palmer/quickclip/blob/main/demo.gif&raw=true)
+## Demo  
+![](https://github.com/bobby-palmer/quickclip/blob/main/demo.gif)
 ## Installation
 with cargo run : `cargo install quickclip`  
 then add your respective shells startup script:
