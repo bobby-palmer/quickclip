@@ -13,7 +13,7 @@ then add your respective shells startup script:
 </details>
 <details closed>
   <summary>zsh</summary>
-  <br>
+  <br>  
   add `eval "$(quickclip init zsh)"` to your config file.  
   this is usually in .zshrc  
 </details>
@@ -28,21 +28,11 @@ then add your respective shells startup script:
 - add new mark with `quickclip {NAME}`
   - if NAME is not specified, it will default to the folder name.  
 - list all marks with `quickclip list`  
-- remove a clip with ` quickclip remove {NAME}`
+- remove a clip with `quickclip remove {NAME}`
 - go to a saved directory with `goto {NAME}`
   - if NAME is un specified it will open a TUI with all your saved directories  
 ### Tips
 - Saving quickclip as an alias for your shell such as `alias qc = quickclip`
-- create a shell goto function to cd to the output of the quickclip goto command
-ie (in fish) :
-```
-# set to cd using bookmarks
-function goto
-  set -l path (command quickclip goto $argv)
-  cd -- "$path"
-end
-
-```
 ## Roadmap
 Eventually I would like to add a fuzzy finder to the tui for selecting the book mark. 
 Currently, though I am more focused on polishing up the current features such as:
