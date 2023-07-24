@@ -1,5 +1,7 @@
 # quickclip
 A directory book marker written in rust 🦀!  
+## demo  
+![alt-text](https://github.com/bobby-palmer/quickclip/blob/main/demo.gif&raw=true)
 ## Installation
 with cargo run : `cargo install quickclip`  
 then add your respective shells startup script:
@@ -27,8 +29,8 @@ then add your respective shells startup script:
   - if NAME is not specified, it will default to the folder name.  
 - list all marks with `quickclip list`  
 - remove a clip with ` quickclip remove {NAME}`
-- print a clip path with `quickclip goto {NAME}`
-- open a GUI for the goto command with `quickclip goto`
+- go to a saved directory with `goto {NAME}`
+  - if NAME is un specified it will open a TUI with all your saved directories  
 ### Tips
 - Saving quickclip as an alias for your shell such as `alias qc = quickclip`
 - create a shell goto function to cd to the output of the quickclip goto command
