@@ -6,6 +6,9 @@ use std::path::PathBuf;
 #[derive(Deserialize, Serialize)]
 pub struct Index(BTreeMap<String, String>);
 impl Index {
+    fn _empty() -> Self {
+        Index(BTreeMap::new())
+    }
     pub fn from_file(file: &PathBuf) -> Self {
         let content = fs::read_to_string(file).unwrap();
         toml::from_str(&content).unwrap()
@@ -34,5 +37,15 @@ impl Index {
     }
     pub fn out(self) -> BTreeMap<String, String> {
         self.0
+    }
+}
+#[cfg(test)]
+mod test {
+    use super::*;
+    #[test]
+    fn test_adding() {
+        let mut tree = Index::_empty();
+        assert!(tree.add("test".into(), "path/to/test".into()));
+        assert!(!tree.add("test".into(), "a/different/path".into()));
     }
 }
