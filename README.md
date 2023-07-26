@@ -38,4 +38,4 @@ Eventually I would like to add a fuzzy finder to the tui for selecting the book 
 Currently, though I am more focused on polishing up the current features such as:
 - Better error handling
 - confirming before overwriting a book mark
-- auto creation of the goto shell function
+  
