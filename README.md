@@ -1,4 +1,5 @@
 # Quickclip 📎
+![](https://github.com/bobby-palmer/quickclip/main/.github/workflows/rust.yml/badge.svg)  
 A directory book marker written in rust 🦀!  
 ## Demo  
 ![](https://github.com/bobby-palmer/quickclip/blob/main/demo.gif)
