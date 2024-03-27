@@ -1,6 +1,7 @@
 # Quickclip 📎
 [![Rust](https://github.com/bobby-palmer/quickclip/actions/workflows/rust.yml/badge.svg)](https://github.com/bobby-palmer/quickclip/actions/workflows/rust.yml)
 ![crates.io](https://img.shields.io/crates/v/quickclip.svg)
+
 A directory book marker written in rust 🦀!  
 ## Demo  
 ![](https://github.com/bobby-palmer/quickclip/blob/main/demo.gif)
